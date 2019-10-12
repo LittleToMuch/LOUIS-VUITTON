@@ -12,42 +12,45 @@
 
 <body>
     <header>
-        <div class="top">
-            <div class="w">
-                <ul class="l">
-                    <li class="first l"><span class="iconfont">&#xe60e;</span>
-                        <p>需要帮助</p>
-                    </li>
-                    <li class="second l"><span class="iconfont">&#xe6c7;</span>
-                        <p>400 6588 555</p>
-                    </li>
-                </ul>
-                <ul class="r">
-                    <li class="l"><span class="iconfont">&#xe630;</span></li>
-                    <li class="l"><span class="iconfont">&#xe78f;</span></li>
-                    <li class="l"><span class="iconfont">&#xe608;</span></li>
-                    <li class="l"><span class="iconfont">&#xe647;</span></li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="bottom">
-            <div class="w">
-                <h1 class="l">LOUIS VUITTON</h1>
-                <ul class="l">
-                    <li class="l first"><a href="#">LV NOW</a></li>
-                    <li class="l"><a href="#">路易威登世界</a></li>
-                    <li class="l"><a href="#">女士</a></li>
-                    <li class="l"><a href="#">男士</a></li>
-                </ul>
-                <div class="search r">
-                    <span class="iconfont l">&#xe615;</span>
-                    <input type="text" class="r" placeholder="搜索建议:线上首发Spring Street 手袋">
-
+        <div class="all">
+            <div class="top">
+                <div class="w">
+                    <ul class="l">
+                        <li class="first l"><span class="iconfont">&#xe60e;</span>
+                            <p>需要帮助</p>
+                        </li>
+                        <li class="second l"><span class="iconfont">&#xe6c7;</span>
+                            <p>400 6588 555</p>
+                        </li>
+                    </ul>
+                    <ul class="r">
+                        <li class="l"><a href="#"><span class="iconfont">&#xe630;</span></a></li>   
+                        <li class="l"><a href="#"><span class="iconfont">&#xe78f;</span></a></li>
+                        <li class="l"><a href="#" id="login-in"><span class="iconfont">&#xe608;</span></a></li>
+                        <li class="l"><span class="iconfont">&#xe647;</span></li>
+                    </ul>
                 </div>
-            </div>
 
+            </div>
+            <div class="bottom">
+                <div class="w">
+                    <h1 class="l">LOUIS VUITTON</h1>
+                    <ul class="l">
+                        <li class="l first"><a href="#">LV NOW</a></li>
+                        <li class="l"><a href="#">路易威登世界</a></li>
+                        <li class="l"><a href="#">女士</a></li>
+                        <li class="l"><a href="#">男士</a></li>
+                    </ul>
+                    <div class="search r">
+                        <span class="iconfont l">&#xe615;</span>
+                        <input type="text" class="r" placeholder="搜索建议:线上首发Spring Street 手袋">
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     </header>
     <div id="banner">
         <img src="./assets/img/banner1.jpg" alt="">
@@ -130,6 +133,26 @@
             </div>
         </div>
     </footer>
+    <div id="login" class="slidebar">
+        <div class="top">
+            <span id="close">×</span>
+            <h2>我已有一个账户</h2>
+            <div class="form-group">
+                <label for="username">用户名(手机号/电子邮件地址)*</label>
+                <input type="text" id="username" placeholder="手机号/邮箱">
+            </div>
+            <div class="form-group">
+                <label for="password">密码*</label>
+                <input type="password" id="password">
+            </div>
+            <a href="#">忘记密码？</a>
+            <button id="btn-login">登陆</button>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    
+    <script src="./lib/jQuery/jquery.min.js"></script>
+    <script src="./js/index/index.js"></script>
 </body>
 
 </html>

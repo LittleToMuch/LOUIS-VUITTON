@@ -67,13 +67,13 @@ let homeJS = async () => {
     //合并需要使用插件gulp-concat
     //npm i gulp-concat
     willy_gulp
-        .src('./src/js/home/**/*.js')
-        .pipe(concat("home.js"))
+        .src('./src/js/index/**/*.js')
+        .pipe(concat("index.js"))
         .pipe(babel({
             presets: ['@babel/env']
         }))     //编译到e5后，进行压缩   gulp-uglify
         .pipe(uglify())
-        .pipe(willy_gulp.dest('./dist/js/home'))
+        .pipe(willy_gulp.dest('./dist/js/index'))
 }
 willy_gulp.task('js-home', homeJS);
 
@@ -102,7 +102,7 @@ function watch() {
     willy_gulp.watch('./src/html/*.html', copyHtml)
     willy_gulp.watch('./src/lib/**/*.*', copyLib)
     willy_gulp.watch('./src/style/**/*.scss', sassTask)
-    willy_gulp.watch('./src/js/home/**/*.js', homeJS)
+    willy_gulp.watch('./src/js/index/**/*.js', homeJS)
 }
 
 willy_gulp.task('watch', watch);

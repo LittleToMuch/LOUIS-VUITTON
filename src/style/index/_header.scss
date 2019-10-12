@@ -1,7 +1,14 @@
 header {
-    width: 100%;
-    height: 139px;
+  width: 100%;
+  height: 138px;
+  overflow: hidden;
+  background-color: #fff;
+  .all {
+    position: fixed;
     background-color: #fff;
+    width: 100%;
+    height: 138px;
+    z-index: 1;
     .top {
       height: 47px;
       border-bottom: 1px solid #ccc;
@@ -48,9 +55,15 @@ header {
             width: 60px;
             height: 47px;
             text-align: right;
+            a {
+              color: black;
+              span {
+                font-size: 22px;
+                cursor: pointer;
+              }
+            }
             span {
               font-size: 22px;
-              cursor: pointer;
             }
           }
         }
@@ -74,8 +87,8 @@ header {
             line-height: 90px;
             font-size: 14px;
             box-sizing: border-box;
-            transition: border 0.5s ;
-              border-bottom: 1px solid transparent;
+            transition: border 0.5s;
+            border-bottom: 1px solid transparent;
             &:hover {
               border-bottom: 1px solid black;
             }
@@ -86,21 +99,21 @@ header {
         }
       }
       div.search {
-        width: 570px;
+        width: 520px;
         height: 90px;
         line-height: 90px;
         position: relative;
         input {
-          width: 520px;
+          width: 480px;
           background-color: #f6f5f3;
           border: 0;
-          height: 50px;
+          height: 40px;
           border-top-right-radius: 10px;
           border-bottom-right-radius: 10px;
           position: absolute;
           top: 50%;
           right: 0;
-          margin-top: -25px;
+          margin-top: -20px;
           font-size: 18px;
         }
         input::placeholder {
@@ -113,13 +126,13 @@ header {
           position: absolute;
           text-align: center;
           top: 50%;
-          margin-top: -25px;
+          margin-top: -20px;
           background-color: #f6f5f3;
           display: block;
           font-size: 22px;
-          height: 50px;
-          width: 50px;
-          line-height: 50px;
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
           z-index: 1;
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
@@ -129,3 +142,4 @@ header {
       }
     }
   }
+}
