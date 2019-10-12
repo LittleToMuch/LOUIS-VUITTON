@@ -1,0 +1,74 @@
+/* 清样式 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+/* 定义全局样式 */
+body {
+  font-size: 12px;
+  font-family: "微软雅黑";
+  height: 2905px;
+  color: #3e3e3e;
+  background-color: #f3f3f3;
+}
+html {
+  background-color: #f3f3f3;
+}
+/* 定义超链接样式 */
+a {
+  text-decoration: none;
+}
+
+/* 公共样式 */
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.w {
+  width: 1772px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../assets/icons/iconfont.eot");
+  src: url("../assets/icons/iconfont.eot?#iefix") format("embedded-opentype"),
+    url("../assets/icons/iconfont.woff2") format("woff2"), url("iconfont.woff") format("woff"),
+    url("../assets/icons/iconfont.ttf") format("truetype"),
+    url("../assets/icons/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

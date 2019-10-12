@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/* 清样式 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+/* 定义全局样式 */
+body {
+  font-size: 12px;
+  font-family: "微软雅黑";
+  height: 2905px;
+  color: #3e3e3e;
+  background-color: #f3f3f3;
+}
+
+html {
+  background-color: #f3f3f3;
+}
+
+/* 定义超链接样式 */
+a {
+  text-decoration: none;
+}
+
+/* 公共样式 */
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.w {
+  width: 1772px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../assets/icons/iconfont.eot");
+  src: url("../assets/icons/iconfont.eot?#iefix") format("embedded-opentype"), url("../assets/icons/iconfont.woff2") format("woff2"), url("iconfont.woff") format("woff"), url("../assets/icons/iconfont.ttf") format("truetype"), url("../assets/icons/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  width: 100%;
+  height: 139px;
+  background-color: #fff;
+}
+
+header .top {
+  height: 47px;
+  border-bottom: 1px solid #ccc;
+}
+
+header .top .w {
+  height: 47px;
+}
+
+header .top .w .l {
+  width: 268px;
+  height: 100%;
+  line-height: 47px;
+}
+
+header .top .w .l .first {
+  width: 134px;
+  height: 100%;
+}
+
+header .top .w .l .first span {
+  font-size: 22px;
+}
+
+header .top .w .l .first p {
+  font-size: 15px;
+  display: inline;
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+}
+
+header .top .w .l .second {
+  width: 134px;
+  height: 100%;
+}
+
+header .top .w .l .second span {
+  font-size: 22px;
+}
+
+header .top .w .l .second p {
+  font-size: 15px;
+  display: inline;
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+}
+
+header .top .w .r {
+  width: 240px;
+  height: 47px;
+  line-height: 47px;
+}
+
+header .top .w .r li {
+  width: 60px;
+  height: 47px;
+  text-align: right;
+}
+
+header .top .w .r li span {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+header .bottom {
+  height: 90px;
+}
+
+header .bottom h1 {
+  line-height: 90px;
+}
+
+header .bottom ul {
+  width: 405px;
+  margin-left: 60px;
+}
+
+header .bottom ul li {
+  margin-left: 32px;
+  text-align: center;
+}
+
+header .bottom ul li a {
+  color: black;
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+  border-bottom: 1px solid transparent;
+}
+
+header .bottom ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+header .bottom ul li.first {
+  margin-left: 0;
+}
+
+header .bottom div.search {
+  width: 570px;
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+}
+
+header .bottom div.search input {
+  width: 520px;
+  background-color: #f6f5f3;
+  border: 0;
+  height: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -25px;
+  font-size: 18px;
+}
+
+header .bottom div.search input::-webkit-input-placeholder {
+  position: relative;
+  font-size: 18px;
+  top: 1px;
+  color: #999;
+}
+
+header .bottom div.search input:-ms-input-placeholder {
+  position: relative;
+  font-size: 18px;
+  top: 1px;
+  color: #999;
+}
+
+header .bottom div.search input::-ms-input-placeholder {
+  position: relative;
+  font-size: 18px;
+  top: 1px;
+  color: #999;
+}
+
+header .bottom div.search input::placeholder {
+  position: relative;
+  font-size: 18px;
+  top: 1px;
+  color: #999;
+}
+
+header .bottom div.search span {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  margin-top: -25px;
+  background-color: #f6f5f3;
+  display: block;
+  font-size: 22px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: default;
+  font-weight: bold;
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=index.css.map */
