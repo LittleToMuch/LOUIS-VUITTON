@@ -5,9 +5,11 @@ main {
   div.left {
     width: 50%;
     height: 100%;
-    
+
     div {
+      a {
         color: #3e3e3e;
+      }
       box-sizing: border-box;
       border-right: 1px solid #ccc;
       padding: 64px;
@@ -37,42 +39,44 @@ main {
     .top {
       height: 470px;
       border-bottom: 1px solid #ccc;
-      h2{
-          font-size: 32px;
-          height: 55px;
-          line-height: 55px;
+      h2 {
+        font-size: 32px;
+        height: 55px;
+        line-height: 55px;
       }
-      p{
-          font-size: 20px;
-          height: 43px;
-          line-height: 43px;
+      p {
+        font-size: 20px;
+        height: 43px;
+        line-height: 43px;
       }
-      div{
-          padding: 0;
+      div {
+        padding: 0;
+        height: 60px;
+        width: 132px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 18px;
+        margin: auto;
+        margin-top: 15px;
+        a {
           height: 60px;
           width: 132px;
-          text-align: center;
-          line-height: 60px;
-          font-size: 18px;
-          margin: auto;
-          margin-top: 15px;
-          a{
-              height: 60px;
-              width: 132px;
-              display: block;
-              background-color: black;
-              color: white;
-              transition: all .5s;
-              &:hover{
-                  background-color: #ddd;
-                  color: black;
-              }
+          display: block;
+          background-color: black;
+          color: white;
+          transition: all 0.5s;
+          &:hover {
+            background-color: #ddd;
+            color: black;
           }
+        }
       }
     }
-    .bottom{
-        height: 740px;
+    .bottom {
+      height: 740px;
+      a {
         color: #3e3e3e;
+      }
     }
   }
 }

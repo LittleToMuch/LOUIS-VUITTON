@@ -1,0 +1,37 @@
+footer{
+    background-color: black;
+    height: 258px;
+    width: 100%;
+    .content{
+        width: 1581px;
+        height: 100%;
+        margin: 0 auto;
+        .top{
+            height: 115px;
+            border-bottom: 1px solid #4e3420;
+            font-size: 15px;
+            line-height: 115px;
+            color: #fff;
+        }
+        .bottom{
+            height: 142px;
+            font-size: 14px;
+            position: relative;
+            ul{
+                height: 14px;
+                line-height: 14px;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                margin-top: -9px;
+                li{
+                    height: 14px;
+                    margin-right: 30px;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
