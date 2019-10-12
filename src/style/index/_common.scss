@@ -37,6 +37,19 @@ body {
   color: #3e3e3e;
   background-color: #fff;
 }
+body.mask{
+  &::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2854px;
+    background-color: black;
+    opacity: .7;
+    z-index: 2;
+  }
+}
 html {
   background-color: #fff;
 }

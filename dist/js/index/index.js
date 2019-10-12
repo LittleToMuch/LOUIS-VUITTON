@@ -1,1 +1,1 @@
-"use strict";var login=$("#login");$("#login-in").on("click",function(){login.removeClass("slidebar")}),$("#close").on("click",function(){login.addClass("slidebar")});
+"use strict";var login=$("#login"),body=$("body");$("#login-in").on("click",function(){login.removeClass("slidebar"),body.addClass("mask")}),$("#close").on("click",function(){login.addClass("slidebar"),body.removeClass("mask")});

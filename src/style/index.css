@@ -43,6 +43,18 @@ body {
   background-color: #fff;
 }
 
+body.mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2854px;
+  background-color: black;
+  opacity: .7;
+  z-index: 2;
+}
+
 html {
   background-color: #fff;
 }
@@ -519,8 +531,8 @@ footer .content .bottom ul li a {
   background-color: #fff;
   width: 642px;
   color: black;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #login .top {
@@ -561,6 +573,8 @@ footer .content .bottom ul li a {
   border: 1px solid #eee;
   text-indent: 1em;
   font-size: 18px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 #login .top input::-webkit-input-placeholder {
@@ -605,13 +619,66 @@ footer .content .bottom ul li a {
   height: 48px;
   cursor: pointer;
   font-size: 14px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #login .top button:hover {
   background-color: #ddd;
   color: black;
+}
+
+#login .bottom {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 31px 66px;
+  width: 100%;
+  height: 534px;
+}
+
+#login .bottom h2 {
+  font-size: 24px;
+  height: 33px;
+  line-height: 33px;
+}
+
+#login .bottom ul {
+  list-style-type: initial;
+  margin-top: 22px;
+  font-size: 15px;
+  height: 27px;
+  line-height: 27px;
+  color: #3e3e3e;
+}
+
+#login .bottom ul li {
+  text-indent: 2em;
+}
+
+#login .bottom button {
+  height: 48px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: 120px;
+  line-height: 48px;
+}
+
+#login .bottom button a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+  background-color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#login .bottom button a:hover {
+  color: black;
+  background-color: #ddd;
 }
 
 #login.slidebar {
