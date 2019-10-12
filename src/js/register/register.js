@@ -68,24 +68,15 @@ function biu() {
 }
 
 
+
 /*-------------------------------------------------------------------------------------------------------------*/
-username.onblur=function () {
+document.querySelector('#username').onblur=function () {
     //1.取得这个input的value
     let user=this.value;
     //2.发送一个请求给后端，带着用户名
     let xhr=new XMLHttpRequest();
-    xhr.open('GET',`/jingdongdong/api/checkuser.php?username=${user}`,true);
+    xhr.open('GET',`/LV/dist/assets/api/checkuser.php?username=${user}`,true);
     xhr.send();
-    // xhr.onreadystatechange=function(){
-    //     if (this.readyState===4){
-    //         if (this.status>=200&&this.status<300){
-    //             //响应了
-    //         }else{
-    //             //请求失败，
-    //         }
-    //     }
-    // };
-
     xhr.onload=function () {
         //相当于onreadystatechange中，readyState===4的情况
 
@@ -93,7 +84,8 @@ username.onblur=function () {
             //响应了
             //php echo的内容，就是我们的this.responseText
             // console.log(this.responseText)
-            if (this.responseText==='不可用'){
+            let data=JSON.parse(this.responseText);
+            if (data.status==='0'){
                 console.log("用户名已存在")
                 document.querySelector('#username').parentElement.classList.add('has-error');
                 document.querySelector('#reg').setAttribute('disabled', 'disabled');
