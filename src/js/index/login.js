@@ -7,11 +7,12 @@ $('#login-in').on('click', function () {
 
 $('#close').on('click', function () {
     login.addClass("slidebar")
-    body.removeClass("mask")
+body.removeClass("mask")
 });
 
 $('#btn-login').on('click',function () {
     const [username,password]=[$('#username').val(),$('#password').val()];
+    console.log(1);
     $.ajax({
         url:'/LV/dist/assets/api/login.php',
         method:'post',
@@ -23,8 +24,7 @@ $('#btn-login').on('click',function () {
             //成功时调用
             let data=JSON.parse(res);
             if (data.status===1){
-                login.addClass("slidebar")
-                body.removeClass("mask")
+                window.location.href="http://localhost/LV/dist/html/myLv.html";
             }
         },
         error:function () {

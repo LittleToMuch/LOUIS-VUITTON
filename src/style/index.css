@@ -287,6 +287,10 @@ header .all .bottom div.search span {
   font-weight: bold;
 }
 
+header #cart-in {
+  cursor: pointer;
+}
+
 #banner img {
   width: 100%;
   height: 100%;
@@ -682,6 +686,121 @@ footer .content .bottom ul li a {
 }
 
 #login.slidebar {
+  right: -642px;
+}
+
+#cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+  background-color: #fff;
+  width: 642px;
+  color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#cart #guanbi {
+  font-size: 30px;
+  position: absolute;
+  right: 31px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#cart .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 64px;
+}
+
+#cart .content h2 {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  font-size: 21px;
+  border-bottom: 1px solid #ccc;
+}
+
+#cart .content h2 span {
+  font-size: 11px;
+  color: #888;
+}
+
+#cart .content .commodity {
+  height: 148px;
+  line-height: 148px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#cart .content .commodity img {
+  width: 116px;
+  height: 116px;
+  float: left;
+}
+
+#cart .content .commodity .infor {
+  float: left;
+  width: 180px;
+  height: 116px;
+  line-height: 116px;
+  font-size: 14px;
+}
+
+#cart .content .commodity .unitPrice {
+  height: 116px;
+  line-height: 116px;
+  float: right;
+  font-size: 13px;
+}
+
+#cart .content .total {
+  height: 108px;
+  line-height: 108px;
+  width: 100%;
+}
+
+#cart .content .total h2 {
+  font-size: 19px;
+  float: left;
+  border: 0;
+  width: 50px;
+  height: 100%;
+  line-height: 108px;
+}
+
+#cart .content .total .totalPrice {
+  float: right;
+  font-size: 16px;
+}
+
+#cart .content button {
+  width: 100%;
+  height: 48px;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 48px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#cart .content button:hover {
+  color: #000;
+  background-color: #ddd;
+}
+
+#cart.slidebar {
   right: -642px;
 }
 /*# sourceMappingURL=index.css.map */

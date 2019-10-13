@@ -1,0 +1,33 @@
+@import "./index/common";
+@import "./index/header";
+@import "./myLv/banner";
+@import "./myLv/main";
+body{
+    background-color: #f6f5f3;
+}
+
+#index{
+    cursor: pointer;
+}
+#name{
+    position: fixed;
+    border: 1px solid #000;
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    background-color:#fff;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    top: 74px;
+    right: 65px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: bold;
+    &:hover{
+        background-color: red;
+        color: #fff;
+        border: 1px solid red;
+    }
+}

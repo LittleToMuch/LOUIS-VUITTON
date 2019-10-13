@@ -17,14 +17,14 @@ if ($username==null||$password==null||$age==null||$sex==null||$tel==null){
 //检测用户名是否存在
 
 $sql="select id from users where users.username='$username'";
-$res=$conn->query($sql);
+$res=$Db->query($sql);
 $result=array("status"=>0);
 if ($res->num_rows>0){
     echo json_encode($result);
     return;
 }else{
     $sql="insert into users (id,username,password,tel,age,sex) values (null,'$username','$password','$tel','$age','$sex')";
-    $res=$conn->query($sql);
+    $res=$Db->query($sql);
     if ($res){
         echo "<h1>注册成功，3s后返回主页</h1>";
         header("Refresh:3;url=http://localhost/LV/dist/index.html");
@@ -33,4 +33,4 @@ if ($res->num_rows>0){
     }
 }
 
-$conn->close();
+$Db->close();

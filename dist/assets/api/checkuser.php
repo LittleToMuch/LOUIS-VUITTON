@@ -4,7 +4,7 @@ include "./base.php";
 $username=$_GET['username'];
 $result=array("status"=>0);
 $sql="select id from users where users.username='$username'";
-$res=$conn->query($sql);
+$res=$Db->query($sql);
 
 if ($res->num_rows>0){
     //用户名存在，不可用
@@ -17,4 +17,4 @@ if ($res->num_rows>0){
 
 
 
-$conn->close();
+$Db->close();

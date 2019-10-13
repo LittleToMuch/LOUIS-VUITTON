@@ -1,0 +1,78 @@
+main {
+  width: 1588px;
+  margin: 0 auto;
+  height: 1012px;
+  position: relative;
+  top: 210px;
+  .zhanghu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 785px;
+    height: 506px;
+    background-color: #fff;
+
+    h2 {
+      border-bottom: 1px solid #ccc;
+      font-size: 26px;
+      height: 98px;
+      width: 100%;
+      padding: 34px;
+      box-sizing: border-box;
+    }
+    div.p {
+      box-sizing: border-box;
+      padding: 34px;
+      p {
+        height: 28px;
+        line-height: 28px;
+        font-size: 15px;
+      }
+    }
+    div.btn {
+      box-sizing: border-box;
+      padding: 34px;
+      button {
+        width: 100%;
+        height: 48px;
+        font-size: 13px;
+        text-align: center;
+        line-height: 48px;
+        color: #fff;
+        background-color: #000;
+        border: 0;
+        cursor: pointer;
+        transition: all .5s;
+        &:hover{
+            color: #000;
+            background-color: #ddd;
+        }
+      }
+    }
+  }
+
+  .wish{
+      @extend .zhanghu;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      top:527px ;
+      p{
+          text-align: center;
+          font-weight: bold;
+          font-size: 16px;
+      }
+  }
+
+  .dingdan{
+      @extend .zhanghu;
+      left: auto;
+      right: 0;
+      height: 300px;
+      p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+    }
+  }
+}
