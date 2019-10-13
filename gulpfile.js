@@ -62,7 +62,7 @@ const babel = require('gulp-babel')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
-let homeJS = async () => {
+async function homeJS() {
     //将home下的所有js文件合并，然后再编译
     //合并需要使用插件gulp-concat
     //npm i gulp-concat
@@ -72,8 +72,7 @@ let homeJS = async () => {
         .pipe(babel({
             presets: ['@babel/env']
         }))     //编译到e5后，进行压缩   gulp-uglify
-        .pipe(uglify())
-        .pipe(willy_gulp.dest('./dist/js/index'))
+        .pipe(willy_gulp.dest('./dist/js/index/'))
 }
 willy_gulp.task('js-home', homeJS);
 
@@ -107,7 +106,7 @@ function watch() {
     willy_gulp.watch('./src/html/*.html', copyHtml)
     willy_gulp.watch('./src/lib/**/*.*', copyLib)
     willy_gulp.watch('./src/style/**/*.scss', sassTask)
-    willy_gulp.watch('./src/js/index/**/*.js', homeJS)
+    willy_gulp.watch('./src/js/myLv/**/*.js', homeJS)
     willy_gulp.watch('./src/assets/api/*.php',php)
 }
 

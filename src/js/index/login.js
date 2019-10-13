@@ -29,7 +29,29 @@ $('#btn-login').on('click',function () {
         },
         error:function () {
             //失败时调用
+            console.log(1112345)
         }
     })
 });
+
+// let num=1;
+// $('#right').on('click',function () {
+//     if (i<4){
+//         $('#bannerPic').attr("src",`./assets/img/banner${++num}.jpg`);
+//     }else{
+//         $('#bannerPic').attr("src","./assets/img/banner1.jpg")
+//         i=1;
+//     }
+//
+// });
+// $('#left').on('click',function () {
+//     if (i>0){
+//         $('#bannerPic').attr("src",`./assets/img/banner${--num}.jpg`)
+//     }else{
+//         $('#bannerPic').attr("src","./assets/img/banner3.jpg");
+//         i=3;
+//     }
+// });
+
+
 

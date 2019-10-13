@@ -9,7 +9,6 @@ $.ajax({
 });
 
 $('#name').on("click",function () {
-    console.log(1);
     $.ajax({
         url:'/LV/dist/assets/api/logout.php',
         method: 'post',
