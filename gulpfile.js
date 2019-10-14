@@ -14,7 +14,7 @@ async function copyIndex() {
     willy_gulp.src('./src/index.html').pipe(willy_gulp.dest('./dist'))
 }
 
-willy_gulp.task('copy-index', copyIndex);
+willy_gulp.task('copy-home', copyIndex);
 
 async function copyHtml() {
     willy_gulp.src('./src/html/*.html').pipe(willy_gulp.dest('./dist/html'));
@@ -67,12 +67,12 @@ async function homeJS() {
     //合并需要使用插件gulp-concat
     //npm i gulp-concat
     willy_gulp
-        .src('./src/js/index/**/*.js')
+        .src('./src/js/home/**/*.js')
         .pipe(concat("index.js"))
         .pipe(babel({
             presets: ['@babel/env']
         }))     //编译到e5后，进行压缩   gulp-uglify
-        .pipe(willy_gulp.dest('./dist/js/index/'))
+        .pipe(willy_gulp.dest('./dist/js/index'))
 }
 willy_gulp.task('js-home', homeJS);
 

@@ -21,6 +21,6 @@ $('#name').on("click",function () {
     })
 });
 
-$('#index').on("click",function () {
+$('#home').on("click",function () {
     window.location.href="http://localhost/LV/dist/index.html"
 });

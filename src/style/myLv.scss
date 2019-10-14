@@ -2,11 +2,14 @@
 @import "./index/header";
 @import "./myLv/banner";
 @import "./myLv/main";
+@import "./index/footer";
+@import "./myLv/cart";
 body{
     background-color: #f6f5f3;
+    height: 1700px;
 }
 
-#index{
+#home{
     cursor: pointer;
 }
 #name{
@@ -21,7 +24,7 @@ body{
     text-align: center;
     top: 74px;
     right: 65px;
-    z-index: 1;
+    z-index: 3;
     cursor: pointer;
     transition: all .5s;
     font-weight: bold;
@@ -31,3 +34,8 @@ body{
         border: 1px solid red;
     }
 }
+
+#cart-in{
+    cursor: pointer;
+}
+

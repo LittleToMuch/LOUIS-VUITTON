@@ -52,7 +52,7 @@ body.mask::before {
   height: 2854px;
   background-color: black;
   opacity: .7;
-  z-index: 2;
+  z-index: 5;
 }
 
 html {
@@ -104,7 +104,7 @@ header .all {
   background-color: #fff;
   width: 100%;
   height: 138px;
-  z-index: 1;
+  z-index: 3;
 }
 
 header .all .top {
@@ -293,11 +293,23 @@ header #cart-in {
 
 #banner {
   position: relative;
+  height: 478px;
 }
 
 #banner img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+#banner .current {
+  opacity: 1;
+  z-index: 2;
 }
 
 #banner #left {
@@ -310,6 +322,11 @@ header #cart-in {
   height: 99px;
   text-align: center;
   line-height: 99px;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #banner #left span {
@@ -318,6 +335,11 @@ header #cart-in {
 }
 
 #banner #right {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 2;
   cursor: pointer;
   position: absolute;
   top: 175px;
@@ -347,35 +369,77 @@ header #cart-in {
   top: 50%;
   margin-top: -67px;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
 }
 
 #desc div.content h2 {
   font-size: 32px;
   height: 32px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-#desc div.content div.href {
+#desc div.content div.desc-btn {
+  position: absolute;
+  height: 60px;
+  width: 650px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -325px;
+}
+
+#desc div.content div.desc-btn div.href {
+  display: inline-block;
   width: 300px;
   height: 60px;
   line-height: 60px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -150px;
 }
 
-#desc div.content div.href a {
+#desc div.content div.desc-btn div.href a {
   background-color: #000;
   color: #fff;
   font-size: 20px;
   display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#desc div.content div.desc-btn div.href a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+#desc div.content div.desc-btn button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: bottom;
+  width: 300px;
+  height: 60px;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  margin-left: 25px;
+  font-size: 20px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-#desc div.content div.href a:hover {
+#desc div.content div.desc-btn button:hover {
   background-color: #ddd;
-  color: #000;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+#desc div.current {
+  opacity: 1;
+  z-index: 1;
 }
 
 main {
@@ -569,7 +633,7 @@ footer .content .bottom ul li a {
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 2;
+  z-index: 999;
   background-color: #fff;
   width: 642px;
   color: black;
@@ -732,7 +796,7 @@ footer .content .bottom ul li a {
   right: 0;
   top: 0;
   height: 100%;
-  z-index: 2;
+  z-index: 999;
   background-color: #fff;
   width: 642px;
   color: black;

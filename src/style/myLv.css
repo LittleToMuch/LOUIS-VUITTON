@@ -52,7 +52,7 @@ body.mask::before {
   height: 2854px;
   background-color: black;
   opacity: .7;
-  z-index: 2;
+  z-index: 5;
 }
 
 html {
@@ -104,7 +104,7 @@ header .all {
   background-color: #fff;
   width: 100%;
   height: 138px;
-  z-index: 1;
+  z-index: 3;
 }
 
 header .all .top {
@@ -365,7 +365,7 @@ main .zhanghu div.btn button:hover, main .wish div.btn button:hover, main .dingd
 }
 
 main .wish {
-  height: 300px;
+  height: 225px;
   position: absolute;
   left: 0;
   top: 527px;
@@ -389,11 +389,171 @@ main .dingdan p {
   font-size: 16px;
 }
 
-body {
-  background-color: #f6f5f3;
+footer {
+  background-color: black;
+  height: 258px;
+  width: 100%;
 }
 
-#index {
+footer .content {
+  width: 1581px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+footer .content .top {
+  height: 115px;
+  border-bottom: 1px solid #4e3420;
+  font-size: 15px;
+  line-height: 115px;
+  color: #fff;
+}
+
+footer .content .bottom {
+  height: 142px;
+  font-size: 14px;
+  position: relative;
+}
+
+footer .content .bottom ul {
+  height: 14px;
+  line-height: 14px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+}
+
+footer .content .bottom ul li {
+  height: 14px;
+  margin-right: 30px;
+}
+
+footer .content .bottom ul li a {
+  color: #fff;
+}
+
+#cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 999;
+  background-color: #fff;
+  width: 642px;
+  color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#cart #guanbi {
+  font-size: 30px;
+  position: absolute;
+  right: 31px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#cart .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 64px;
+}
+
+#cart .content h2 {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  font-size: 21px;
+  border-bottom: 1px solid #ccc;
+}
+
+#cart .content h2 span {
+  font-size: 11px;
+  color: #888;
+}
+
+#cart .content .commodity {
+  height: 148px;
+  line-height: 148px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#cart .content .commodity img {
+  width: 116px;
+  height: 116px;
+  float: left;
+}
+
+#cart .content .commodity .infor {
+  float: left;
+  width: 180px;
+  height: 116px;
+  line-height: 116px;
+  font-size: 14px;
+}
+
+#cart .content .commodity .unitPrice {
+  height: 116px;
+  line-height: 116px;
+  float: right;
+  font-size: 13px;
+}
+
+#cart .content .total {
+  height: 108px;
+  line-height: 108px;
+  width: 100%;
+}
+
+#cart .content .total h2 {
+  font-size: 19px;
+  float: left;
+  border: 0;
+  width: 50px;
+  height: 100%;
+  line-height: 108px;
+}
+
+#cart .content .total .totalPrice {
+  float: right;
+  font-size: 16px;
+}
+
+#cart .content button {
+  width: 100%;
+  height: 48px;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 48px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#cart .content button:hover {
+  color: #000;
+  background-color: #ddd;
+}
+
+#cart.slidebar {
+  right: -642px;
+}
+
+body {
+  background-color: #f6f5f3;
+  height: 1700px;
+}
+
+#home {
   cursor: pointer;
 }
 
@@ -409,7 +569,7 @@ body {
   text-align: center;
   top: 74px;
   right: 65px;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -420,5 +580,9 @@ body {
   background-color: red;
   color: #fff;
   border: 1px solid red;
+}
+
+#cart-in {
+  cursor: pointer;
 }
 /*# sourceMappingURL=myLv.css.map */
