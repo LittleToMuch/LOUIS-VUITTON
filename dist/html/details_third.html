@@ -6,10 +6,160 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/icons/iconfont.css">
+    <link rel="stylesheet" href="../css/details_third.css">
 </head>
 <body>
 
+<header>
+    <div class="all">
+        <div class="top">
+            <div class="w">
+                <ul class="l">
+                    <li class="first l"><span class="iconfont">&#xe60e;</span>
+                        <p>需要帮助</p>
+                    </li>
+                    <li class="second l"><span class="iconfont">&#xe6c7;</span>
+                        <p>400 6588 555</p>
+                    </li>
+                </ul>
+                <ul class="r">
+                    <li class="l"><a href="#"><span class="iconfont">&#xe630;</span></a></li>
+                    <li class="l"><a href="#"><span class="iconfont">&#xe78f;</span></a></li>
+                    <li class="l"><a href="#" id="login-in"><span class="iconfont">&#xe608;</span></a></li>
+                    <li class="l"><span class="iconfont" id="cart-in">&#xe647;</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <div class="w">
+                <h1 class="l" id="home">LOUIS VUITTON</h1>
+                <ul class="l">
+                    <li class="l first"><a href="#">LV NOW</a></li>
+                    <li class="l"><a href="#">路易威登世界</a></li>
+                    <li class="l"><a href="#">女士</a></li>
+                    <li class="l"><a href="#" id="man">男士</a></li>
+                </ul>
+                <div class="search r">
+                    <span class="iconfont l">&#xe615;</span>
+                    <input type="text" class="r" placeholder="搜索建议:线上首发Spring Street 手袋">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+<main>
+    <div class="left">
+        <button class="back"><span class="iconfont">&#xe625;</span></button>
+
+        <img src="../assets/img/details_second/shop02.jpg" alt="">
+        <p>本款 Rivoli 运动鞋为柔软的白色粒面小牛皮勾勒彩色轮廓，再以激光技术呈现 Monogram 图案。高帮设计搭配加衬鞋舌，点缀金色 LV 字母；魔术贴可前后扣合，切换自如。</p>
+    </div>
+    <div class="right">
+        <div class="content">
+            <h2>TATTOO运动鞋</h2>
+            <div class="size-select">
+                <label for="size">尺寸：</label>
+                <select name="size" id="size">
+                    <option value="" disabled>请选择合适的尺寸</option>
+                    <option value="05.0">05.0</option>
+                    <option value="05.5">05.5</option>
+                    <option value="06.0">06.0</option>
+                    <option value="06.5">06.5</option>
+                    <option value="07.0">07.0</option>
+                    <option value="07.5">07.5</option>
+                    <option value="08.0" selected>08.0</option>
+                    <option value="08.5">08.5</option>
+                    <option value="09.0">09.0</option>
+                    <option value="09.5">09.5</option>
+                </select>
+            </div>
+            <p>$7300</p>
+            <button>放入购物袋</button>
+            <h5>中国大陆地区尊享顺丰免费配送</h5>
+        </div>
 
 
+    </div>
+
+
+</main>
+
+<div id="login" class="slidebar">
+    <div class="top">
+        <span id="close">×</span>
+        <h2>我已有一个账户</h2>
+        <div class="form-group">
+            <label for="username">用户名(手机号/电子邮件地址)*</label>
+            <input type="text" id="username" placeholder="手机号/邮箱">
+        </div>
+        <div class="form-group">
+            <label for="password">密码*</label>
+            <input type="password" id="password">
+        </div>
+        <a href="#">忘记密码？</a>
+        <button id="btn-login">登陆</button>
+    </div>
+    <div class="bottom">
+        <h2>创建新的账户</h2>
+        <ul>
+            创建MyLV账户后，您可以通过任何设备:
+            <li>查询您的网上订单及历史购买记录</li>
+            <li>管理您的个人信息</li>
+            <li>获取最新的路易威登电子报</li>
+            <li>储存您的购物袋及愿望清单</li>
+        </ul>
+        <button><a href="./html/register.html">创建MyLV账户</a></button>
+    </div>
+</div>
+
+<div id="cart" class="slidebar" style="overflow: auto">
+    <span id="guanbi">×</span>
+    <div class="content">
+        <h2>您的购物袋 <span>(3)</span></h2>
+        <div class="commodity-content">
+<!--            <div class="commodity">-->
+<!--                <img src="" alt="">-->
+<!--                <p class="infor">TATTOO运动鞋</p>-->
+<!--                <span class="unitPrice">$7900</span>-->
+<!--            </div>-->
+        </div>
+
+        <div class="total">
+            <h2>总计</h2>
+            <span class="totalPrice">$7900</span>
+        </div>
+        <button>立即结账</button>
+    </div>
+</div>
+
+<footer>
+    <div class="content">
+        <div class="top">LOUIS VUITTON</div>
+        <div class="bottom">
+            <ul>
+                <li class="l"><a href="#">中国大陆</a></li>
+                <li class="l"><a href="#">订阅电子报</a></li>
+                <li class="l"><a href="#">联系我们</a></li>
+                <li class="l"><a href="#">应用程序</a></li>
+                <li class="l"><a href="#">关注我们</a></li>
+                <li class="l"><a href="#">法律声明和隐私条款</a></li>
+                <li class="l"><a href="#">沪ICP备09069024号</a></li>
+                <li class="l"><a href="#">电子营业照</a></li>
+                <li class="l"><a href="#">出版物经营许可证</a></li>
+                <li class="l"><a href="#">沪公网安备</a></li>
+                <li class="l"><a href="#">招聘</a></li>
+                <li class="l"><a href="#">网站地图</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="../lib/jQuery/jquery.min.js"></script>
+<script src="../js/details_third/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+main {
+  height: 600px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  .left {
+    float: left;
+    height: 470px;
+    width: 1269px;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 118px;
+      height: 77px;
+      cursor: pointer;
+      border: 0;
+      border: 1px solid #ccc;
+      padding: 0;
+      background-color: #fff;
+      font-size: 24px;
+      line-height: 77px;
+      text-align: center;
+    }
+    img {
+      width: 470px;
+      height: 470px;
+      margin: auto;
+    }
+    p{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 80px;
+        padding-right: 80px;
+        font-size: 18px;
+        text-indent: 2em;
+        line-height: 45px;
+    }
+  }
+  .right {
+      width: 633px;
+    float: right;
+    height: 600px;
+    border-left: 1px solid #ccc;
+    div.content {
+        box-sizing: border-box;
+        padding: 60px;
+      h2 {
+        font-size: 28px;
+        height: 28px;
+        line-height: 28px;
+      }
+      div.size-select {
+          margin-top: 45px;
+          height: 100px;
+          width: 100%;
+        label{
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        select{
+            position: relative;
+            font-size: 15px;
+            text-indent: 1em;
+            top: 16px;
+            width: 100%;
+            height: 48px;
+            border: 1px solid #ccc;
+            box-shadow: #000;
+            outline: 0;
+            &:focus{
+                border-color: #000;
+                outline-color: #000;
+                
+            }
+            option{
+                color: #000;
+            }
+        }
+        border-bottom: 1px solid #ccc;
+      }
+
+      p{
+          font-size: 15px;
+          font-weight: bold;
+          height: 15px;
+          line-height: 15px;
+          margin-top: 40px;
+      }
+      button{
+          width: 100%;
+          height: 50px;
+          border: 0;
+          padding: 0;
+          background-color: #000;
+          color: #fff;
+          margin-top: 20px;
+          transition: all .5s;
+          cursor: pointer;
+          &:hover{
+              color: #000;
+              background-color: #ddd;
+          }
+      }
+      h5{
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          font-size: 12px;
+          font-weight: 100;
+          color: #777;
+          text-align: center;
+      }
+    }
+  }
+}

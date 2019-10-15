@@ -75,6 +75,33 @@ async function homeJS() {
         .pipe(willy_gulp.dest('./dist/js/index'))
 }
 willy_gulp.task('js-home', homeJS);
+async function detailSecond() {
+    //将home下的所有js文件合并，然后再编译
+    //合并需要使用插件gulp-concat
+    //npm i gulp-concat
+    willy_gulp
+        .src('./src/js/details_second/**/*.js')
+        .pipe(concat("main.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))     //编译到e5后，进行压缩   gulp-uglify
+        .pipe(willy_gulp.dest('./dist/js/details_second'))
+}
+willy_gulp.task('details', detailSecond);
+
+async function detailThird() {
+    //将home下的所有js文件合并，然后再编译
+    //合并需要使用插件gulp-concat
+    //npm i gulp-concat
+    willy_gulp
+        .src('./src/js/details_third/**/*.js')
+        .pipe(concat("main.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))     //编译到e5后，进行压缩   gulp-uglify
+        .pipe(willy_gulp.dest('./dist/js/details_third'))
+}
+willy_gulp.task('details-third', detailThird);
 
 async function php(){
     willy_gulp.src('./src/assets/api/*.php').pipe(willy_gulp.dest('./dist/assets/api'))

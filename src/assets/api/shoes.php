@@ -1,7 +1,9 @@
 <?php
 include "./base.php";
 
-$sql="select * from shoes";
+$start=$_POST["start"];
+$end=$_POST["end"];
+$sql="select * from shoes limit $start,$end";
 
 $res=$Db->query($sql);
 if ($res->num_rows>0){

@@ -1,15 +1,9 @@
 @import "./index/common";
 @import "./index/header";
-@import "./detail_second/banner";
-@import "./detail_second/title";
-@import "./detail_second/main";
 @import "./index/footer";
 @import "./index/login";
 @import "./index/cart";
-
-#man{
-    border-bottom: 1px solid #000;
-}
+@import "./details_third/main";
 body{
     height: auto;
 }
