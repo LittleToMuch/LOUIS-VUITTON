@@ -72,26 +72,19 @@
                                 shopid:data.id,
                                 shopName:data.name,
                                 shopPic:data.pic,
-                                shopPrice:data.price
+                                shopPrice:data.price,
+                                handle:"add"
                             },
                             success:function (res) {
-                                console.log(res);
                                 let data=JSON.parse(res);
+                                console.log(data);
                                 if (data.status===1){
-                                    let div=document.createElement('div');
-                                    div.className='tishi';
-                                    div.innerHTML="添加购物车成功~";
-                                    div.style.position="absolute";
-                                    div.style.zIndex="9999";
-                                    div.style.opacity="1";
-                                    div.style.top=`300px`;
-                                    div.style.left=`-300px`;
-                                    div.style.width=`100px`;
-                                    div.style.height=`100px`;
-                                    div.style.backgroundColor=`cyan`;
-                                    document.querySelector('#cart').appendChild(div);
+                                    let div=document.createElement('h2');
+                                    div.innerHTML="已添加到购物袋~";
+                                    div.className="addSuccess";
+                                    document.querySelector('main').appendChild(div);
                                     setTimeout(()=>{
-                                        document.querySelector('.tishi').remove();
+                                        document.querySelector('.addSuccess').remove();
                                     },3000)
                                 }
                             }

@@ -2,6 +2,30 @@ main {
   height: 600px;
   width: 100%;
   border-top: 1px solid #ccc;
+  position: relative;
+  z-index: 2;
+  .addSuccess{
+    width: 200px;
+    height: 80px;
+    border: 1px solid #0f0f0f;
+    box-shadow: 2px 2px 3px #000;
+    box-shadow: -2px -2px 3px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -40px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 70px;
+    font-size: 20px;
+    &::before{
+      content: "√";
+      color: green;
+      font-size: 35px;
+    }
+  }
   .left {
     float: left;
     height: 470px;

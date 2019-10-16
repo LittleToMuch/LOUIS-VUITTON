@@ -34,7 +34,7 @@
           count += parseInt(d.count);
         });
         var dataArr = data.map(function (d) {
-          return "\n                    <div class=\"commodity\">\n                        <img src=".concat(d.pic, " alt=\"\">\n                        <p class=\"infor\">").concat(d.shopname, "\xD7").concat(d.count, "</p>\n                        <span class=\"unitPrice\">$").concat(parseInt(d.price) * parseInt(d.count), "</span>\n                    </div>\n                    ");
+          return "\n                    <div class=\"commodity\">\n                        <button class=\"deleteShop\">x</button>\n                        <input type=\"hidden\" value=".concat(d.shopid, " class=\"hidden\">\n                        <img src=").concat(d.pic, " alt=\"\">\n                        <p class=\"infor\">").concat(d.shopname, "\xD7").concat(d.count, "</p>\n                        <button class=\"add\">+</button>\n                        <button class=\"sub\">-</button>\n                        <span class=\"unitPrice\">$").concat(parseInt(d.price) * parseInt(d.count), "</span>\n                    </div>\n                    ");
         });
         var dataStr = dataArr.join("").trim();
         var totalPrice = 0;
@@ -44,6 +44,79 @@
         document.querySelector('.commodity-content').innerHTML = dataStr;
         document.querySelector('.content h2 span').innerHTML = count;
         document.querySelector('.totalPrice').innerHTML = "$".concat(totalPrice);
+        var _ref = [document.querySelectorAll('.commodity .add'), document.querySelectorAll('.commodity .sub'), document.querySelectorAll('.commodity .deleteShop')],
+            add = _ref[0],
+            sub = _ref[1],
+            del = _ref[2];
+        console.log(add);
+
+        for (var i = 0; i < add.length; i++) {
+          add[i].addEventListener('click', function () {
+            var inforHTML = this.parentElement.querySelector('.infor').innerHTML;
+            var unitPriceHTML = this.parentElement.querySelector('.unitPrice').innerHTML;
+            var shopid = this.parentElement.querySelector('.hidden').value;
+            var num = inforHTML.split("×");
+            var price = unitPriceHTML.split("$");
+            var newPrice = parseInt(price[1]) + parseInt(price[1]) / parseInt(num[1]);
+            var newNum = parseInt(num[1]) + 1;
+            this.parentElement.querySelector('.infor').innerHTML = "".concat(num[0], "\xD7").concat(newNum);
+            this.parentElement.querySelector('.unitPrice').innerHTML = "$".concat(newPrice);
+            $.ajax({
+              url: "http://localhost/LV/dist/assets/api/setCart.php",
+              method: "post",
+              data: {
+                shopid: shopid,
+                handle: "add"
+              },
+              success: function success(res) {
+                console.log(res);
+              }
+            });
+          });
+        }
+
+        for (var _i = 0; _i < sub.length; _i++) {
+          sub[_i].addEventListener('click', function () {
+            var inforHTML = this.parentElement.querySelector('.infor').innerHTML;
+            var unitPriceHTML = this.parentElement.querySelector('.unitPrice').innerHTML;
+            var shopid = this.parentElement.querySelector('.hidden').value;
+            var num = inforHTML.split("×");
+            var price = unitPriceHTML.split("$");
+            var newPrice = parseInt(num[1]) <= 1 ? parseInt(price[1]) : parseInt(price[1]) - parseInt(price[1]) / parseInt(num[1]);
+            var newNum = parseInt(num[1]) <= 1 ? 1 : parseInt(num[1]) - 1;
+            this.parentElement.querySelector('.infor').innerHTML = "".concat(num[0], "\xD7").concat(newNum);
+            this.parentElement.querySelector('.unitPrice').innerHTML = "$".concat(newPrice);
+            $.ajax({
+              url: "http://localhost/LV/dist/assets/api/setCart.php",
+              method: "post",
+              data: {
+                shopid: shopid,
+                handle: "sub"
+              },
+              success: function success(res) {
+                console.log(res);
+              }
+            });
+          });
+        }
+
+        for (var _i2 = 0; _i2 < del.length; _i2++) {
+          del[_i2].addEventListener('click', function () {
+            this.parentElement.remove();
+            var shopid = this.parentElement.querySelector('.hidden').value;
+            $.ajax({
+              url: "http://localhost/LV/dist/assets/api/setCart.php",
+              method: "post",
+              data: {
+                shopid: shopid,
+                handle: "del"
+              },
+              success: function success(res) {
+                console.log(res);
+              }
+            });
+          });
+        }
       }
     });
   });
@@ -79,9 +152,9 @@
     body.removeClass("mask");
   });
   $('#btn-login').on('click', function () {
-    var _ref = [$('#username').val(), $('#password').val()],
-        username = _ref[0],
-        password = _ref[1];
+    var _ref2 = [$('#username').val(), $('#password').val()],
+        username = _ref2[0],
+        password = _ref2[1];
     console.log(1);
     $.ajax({
       url: '/LV/dist/assets/api/login.php',
@@ -150,27 +223,20 @@
                 shopid: data.id,
                 shopName: data.name,
                 shopPic: data.pic,
-                shopPrice: data.price
+                shopPrice: data.price,
+                handle: "add"
               },
               success: function success(res) {
-                console.log(res);
                 var data = JSON.parse(res);
+                console.log(data);
 
                 if (data.status === 1) {
-                  var div = document.createElement('div');
-                  div.className = 'tishi';
-                  div.innerHTML = "添加购物车成功~";
-                  div.style.position = "absolute";
-                  div.style.zIndex = "9999";
-                  div.style.opacity = "1";
-                  div.style.top = "300px";
-                  div.style.left = "-300px";
-                  div.style.width = "100px";
-                  div.style.height = "100px";
-                  div.style.backgroundColor = "cyan";
-                  document.querySelector('#cart').appendChild(div);
+                  var div = document.createElement('h2');
+                  div.innerHTML = "已添加到购物袋~";
+                  div.className = "addSuccess";
+                  document.querySelector('main').appendChild(div);
                   setTimeout(function () {
-                    document.querySelector('.tishi').remove();
+                    document.querySelector('.addSuccess').remove();
                   }, 3000);
                 }
               }

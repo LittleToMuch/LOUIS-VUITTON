@@ -75,6 +75,19 @@ async function homeJS() {
         .pipe(willy_gulp.dest('./dist/js/index'))
 }
 willy_gulp.task('js-home', homeJS);
+async function myLv() {
+    //将home下的所有js文件合并，然后再编译
+    //合并需要使用插件gulp-concat
+    //npm i gulp-concat
+    willy_gulp
+        .src('./src/js/myLv/**/*.js')
+        .pipe(concat("myLv.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))     //编译到e5后，进行压缩   gulp-uglify
+        .pipe(willy_gulp.dest('./dist/js/myLv'))
+}
+willy_gulp.task('myLv', myLv);
 async function detailSecond() {
     //将home下的所有js文件合并，然后再编译
     //合并需要使用插件gulp-concat
@@ -133,8 +146,11 @@ function watch() {
     willy_gulp.watch('./src/html/*.html', copyHtml)
     willy_gulp.watch('./src/lib/**/*.*', copyLib)
     willy_gulp.watch('./src/style/**/*.scss', sassTask)
-    willy_gulp.watch('./src/js/myLv/**/*.js', homeJS)
+    willy_gulp.watch('./src/js/home/**/*.js', homeJS)
     willy_gulp.watch('./src/assets/api/*.php',php)
+    willy_gulp.watch('./src/js/details_third/*.js',detailThird)
+    willy_gulp.watch('./src/js/details_second/*.js',detailSecond)
+    willy_gulp.watch('./src/js/myLv/*.js',myLv);
 }
 
 willy_gulp.task('watch', watch);
